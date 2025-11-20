@@ -51,7 +51,7 @@ class BallViewModel : ViewModel() {
                 // val dT = ...
                 // Raw sensor gravity: x = right, y = up (opposite screen Y)
                 // BUT screen Y increases downward to invert Y
-                val xAcc = event.values[0]
+                val xAcc = -event.values[0]
                 val yAcc = -event.values[1]
 
                 // TODO: Update the ball's position and velocity
@@ -83,6 +83,6 @@ class BallViewModel : ViewModel() {
         }
 
         // TODO: Reset the lastTimestamp
-        lastTimestamp = 0L
+        // lastTimestamp = 0L
     }
 }
